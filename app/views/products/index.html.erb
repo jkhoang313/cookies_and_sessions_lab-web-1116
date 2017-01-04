@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cart</title>
+  </head>
+  <body>
+    <h3>Cart</h3>
+    <ul>
+      <% @cart.each do |item| %>
+        <li><%= item %></li>
+      <% end %>
+    </ul>
+    <%= form_tag('/') do %>
+      <%= text_field_tag :product %>
+      <%= submit_tag "add to cart" %>
+    <% end %>
+  </body>
+</html>
